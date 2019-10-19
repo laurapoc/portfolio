@@ -1,0 +1,621 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* bendros taisyklės selektoriams */
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #566366;
+}
+
+p {
+  color: #566366;
+  font-size: 1.125rem;
+  font-weight: 400;
+  text-align: justify;
+  line-height: 1.6666;
+}
+
+h3 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #566366;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+#icon {
+  color: #2ecc71;
+  margin-top: 25px;
+  margin-right: 30px;
+}
+
+/* pagrindinė nuotrauka */
+.hello {
+  background-image: url("../img/_20190829_162550-compressor.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 3.75rem;
+  font-weight: 700;
+  border-bottom: 3px solid #ffffff;
+  border-top: 3px solid #ffffff;
+}
+
+.more {
+  color: #ffffff;
+  font-weight: 700;
+  border: 1px solid #ffffff;
+  padding: 20px 40px;
+  text-decoration: none;
+}
+
+/* menu juosta */
+header {
+  background-color: #282828;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+}
+
+header .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+header .navigation .img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+header .navigation ul {
+  margin: 0;
+  padding: 30px 0 30px 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+header .navigation li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  padding-left: 40px;
+}
+
+.main-nav {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* "home" blokas */
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  background-color: #ffffff;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.home div {
+  width: calc(33.3333% - 60px);
+}
+
+.home div h2 {
+  margin-top: 100px;
+  margin-bottom: 55px;
+}
+
+.home div p {
+  margin: 0 0 100px 0;
+}
+
+/* about me blokas */
+.about {
+  background-color: #f2f2f1;
+}
+
+.about .about_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about .about_container img {
+  width: calc(40% - 30px);
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.about .about_container .container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.about .about_details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.about .about_details .about_column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(50% - 50px);
+}
+
+/* skills blokas */
+.skills_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.skills_container .skills_block {
+  width: calc(50% - 47px);
+}
+
+.skills_container .skills_block .my_skills {
+  padding-bottom: 40px;
+}
+
+.skills_container .skills_block .my_skills h2 {
+  margin-top: 0;
+}
+
+.skills_container .skills_block h3 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.skills_container .skills_block #contact_me {
+  color: #2ecc71;
+  font-size: 1.125rem;
+  font-weight: 700;
+  border: 3px solid #2ecc71;
+  padding: 20px 40px;
+  text-decoration: none;
+}
+
+.skills_container .skills_block .skills_scale {
+  padding-top: 13px;
+}
+
+.skills_container .skills_block .skills_scale progress[value] {
+  /* Reset the default appearance: 
+                WebKit/Blink (Chrome/Safari/Opera) */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 24px;
+}
+
+.skills_container .skills_block .skills_scale progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+.skills_container .skills_block .skills_scale progress[value]::-webkit-progress-value {
+  background-color: #2ecc71;
+}
+
+.skills_container .skills_block .skills_scale progress[value] {
+  /* Reset the default appearance: FIREFOX */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Get rid of default border in Firefox. */
+  border: none;
+  /* Dimensions */
+  width: 100%;
+  height: 24px;
+}
+
+.skills_container .skills_block .skills_scale progress[value]::-moz-progress-bar {
+  background-color: #2ecc71;
+}
+
+.skills_container .skills_block .skills_scale .progress-bar span {
+  position: absolute;
+  top: 0;
+  display: block;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+}
+
+.skills_container .skills_block .skills_scale .progress-bar {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.skills_container .skills_block .skills_scale progress[value] {
+  /* Reset the default appearance: Internet Explorer */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Get rid of default border in Firefox. */
+  border: none;
+  /* Dimensions */
+  width: 100%;
+  height: 24px;
+  /* For IE10 */
+  color: #2ecc71;
+}
+
+/* sentiment blokas */
+.sentiment,
+.sentiment2 {
+  background-color: #f2f1f1;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.sentiment p,
+.sentiment2 p {
+  text-align: center;
+}
+
+.sent-name {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.sentiment2 .owl-carousel p {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.sent-name {
+  font-weight: 700;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #f2f1f1;
+  margin: 0 auto;
+}
+
+/* education/experience blokas */
+.education_experience {
+  margin-bottom: 100px;
+}
+
+.education_experience .new {
+  border-bottom: 3px solid #f2f1f1;
+}
+
+.education_experience .container {
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.education_experience .container h2 {
+  margin-top: 0;
+}
+
+.education_experience .container .education,
+.education_experience .container .experience {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.education_experience .container .education .education_paragraph,
+.education_experience .container .education .experience_paragraph,
+.education_experience .container .experience .education_paragraph,
+.education_experience .container .experience .experience_paragraph {
+  width: calc(50% - 47px);
+}
+
+.education_experience .container .education .education_paragraph .education_list h3,
+.education_experience .container .education .education_paragraph .experience_list h3,
+.education_experience .container .education .experience_paragraph .education_list h3,
+.education_experience .container .education .experience_paragraph .experience_list h3,
+.education_experience .container .experience .education_paragraph .education_list h3,
+.education_experience .container .experience .education_paragraph .experience_list h3,
+.education_experience .container .experience .experience_paragraph .education_list h3,
+.education_experience .container .experience .experience_paragraph .experience_list h3 {
+  margin-bottom: 0;
+}
+
+.education_experience .container .education .education_paragraph .education_list .education_date,
+.education_experience .container .education .education_paragraph .education_list .experience_date,
+.education_experience .container .education .education_paragraph .experience_list .education_date,
+.education_experience .container .education .education_paragraph .experience_list .experience_date,
+.education_experience .container .education .experience_paragraph .education_list .education_date,
+.education_experience .container .education .experience_paragraph .education_list .experience_date,
+.education_experience .container .education .experience_paragraph .experience_list .education_date,
+.education_experience .container .education .experience_paragraph .experience_list .experience_date,
+.education_experience .container .experience .education_paragraph .education_list .education_date,
+.education_experience .container .experience .education_paragraph .education_list .experience_date,
+.education_experience .container .experience .education_paragraph .experience_list .education_date,
+.education_experience .container .experience .education_paragraph .experience_list .experience_date,
+.education_experience .container .experience .experience_paragraph .education_list .education_date,
+.education_experience .container .experience .experience_paragraph .education_list .experience_date,
+.education_experience .container .experience .experience_paragraph .experience_list .education_date,
+.education_experience .container .experience .experience_paragraph .experience_list .experience_date {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 40px;
+}
+
+.education_experience .container .education .education_paragraph .education_list #diploma,
+.education_experience .container .education .education_paragraph .education_list #photo,
+.education_experience .container .education .education_paragraph .experience_list #diploma,
+.education_experience .container .education .education_paragraph .experience_list #photo,
+.education_experience .container .education .experience_paragraph .education_list #diploma,
+.education_experience .container .education .experience_paragraph .education_list #photo,
+.education_experience .container .education .experience_paragraph .experience_list #diploma,
+.education_experience .container .education .experience_paragraph .experience_list #photo,
+.education_experience .container .experience .education_paragraph .education_list #diploma,
+.education_experience .container .experience .education_paragraph .education_list #photo,
+.education_experience .container .experience .education_paragraph .experience_list #diploma,
+.education_experience .container .experience .education_paragraph .experience_list #photo,
+.education_experience .container .experience .experience_paragraph .education_list #diploma,
+.education_experience .container .experience .experience_paragraph .education_list #photo,
+.education_experience .container .experience .experience_paragraph .experience_list #diploma,
+.education_experience .container .experience .experience_paragraph .experience_list #photo {
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  border: 3px solid #2ecc71;
+  background-color: #2ecc71;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.education_experience .container .education .education_paragraph .education_list .education_description,
+.education_experience .container .education .education_paragraph .experience_list .education_description,
+.education_experience .container .education .experience_paragraph .education_list .education_description,
+.education_experience .container .education .experience_paragraph .experience_list .education_description,
+.education_experience .container .experience .education_paragraph .education_list .education_description,
+.education_experience .container .experience .education_paragraph .experience_list .education_description,
+.education_experience .container .experience .experience_paragraph .education_list .education_description,
+.education_experience .container .experience .experience_paragraph .experience_list .education_description {
+  border-top: 3px solid #f2f1f1;
+}
+
+/* galerija */
+.galery .container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.galery .container .text-block {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.galery .container .text-block h2 {
+  margin: 0 auto;
+}
+
+.galery .container .text-block p {
+  text-align: center;
+}
+
+.galery .container .photo-carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.galery .container .photo-carousel .photo {
+  width: calc(33, 3333% - 20px);
+  padding-bottom: 40px;
+}
+
+/* contact me blokas */
+.contact-info {
+  background-color: #252e30;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.contact-info .container h2 {
+  color: #ffffff;
+}
+
+.contact-info .container .contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.contact-info .container .contact-container .input {
+  width: calc(50% - 45px);
+}
+
+.contact-info .container .contact-container .input .name,
+.contact-info .container .contact-container .input .email,
+.contact-info .container .contact-container .input .email-me {
+  padding-bottom: 10px;
+}
+
+.contact-info .container .contact-container .input .email,
+.contact-info .container .contact-container .input .email-me {
+  padding-top: 40px;
+}
+
+.contact-info .container .contact-container .input label {
+  color: #ffffff;
+}
+
+.contact-info .container .contact-container .input label span {
+  color: #4b5456;
+}
+
+.contact-info .container .contact-container .input input {
+  background-color: #4b5456;
+  border: 0px;
+  width: 100%;
+  font-size: 1.125rem;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #fff;
+}
+
+.contact-info .container .contact-container .input #message {
+  background-color: #4b5456;
+  border: 0px;
+  width: 100%;
+  font-size: 1.125rem;
+  color: #fff;
+  font-family: roboto;
+}
+
+.contact-info .container .contact-container button {
+  background: #191f21;
+  color: #ffffff;
+  border: 0px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-top: 40px;
+  padding: 20px 35px;
+}
+
+.contact-info .container .contact-container span {
+  display: inline-block;
+  min-width: 100px;
+  color: #ffffff;
+}
+
+/* social media buttons */
+.social-media {
+  background-color: #191f21;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.social-media .container {
+  text-align: center;
+}
+
+.social-media .container h4 {
+  color: #4b5456;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.social-media .container a {
+  margin: 0 5px;
+}
+
+.social-media .container .fa-facebook, .social-media .container .fa-linkedin {
+  color: #566366;
+}
+
+/* Responsive design dalis */
+@media all and (max-width: 900px) {
+  .container {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .main-nav {
+    display: block;
+  }
+  .show {
+    display: block;
+  }
+  .about,
+  .sentiment,
+  .education_experience,
+  .sentiment2,
+  .contact-info,
+  .social-media {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .column {
+    width: 50%;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

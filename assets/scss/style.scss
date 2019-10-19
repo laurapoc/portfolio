@@ -1,0 +1,553 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* bendros taisyklės selektoriams */
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #566366;
+}
+
+p {
+  color: #566366;
+  font-size: 1.125rem;
+  font-weight: 400;
+  text-align: justify;
+  line-height: 1.6666;
+}
+
+h3 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #566366;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+#icon {
+  color: #2ecc71;
+  margin-top: 25px;
+  margin-right: 30px;
+}
+
+/* pagrindinė nuotrauka */
+.hello {
+  background-image: url("../img/_20190829_162550-compressor.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 3.75rem;
+  font-weight: 700;
+  border-bottom: 3px solid #ffffff;
+  border-top: 3px solid #ffffff;
+}
+
+.more {
+  color: #ffffff;
+  font-weight: 700;
+  border: 1px solid #ffffff;
+  padding: 20px 40px;
+  text-decoration: none;
+}
+
+/* menu juosta */
+header {
+  background-color: #282828;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+
+    .img {
+      display: flex;
+      align-self: center;
+    }
+
+    ul {
+      margin: 0;
+      padding: 30px 0 30px 0;
+      text-align: center;
+      display: flex;
+      list-style: none;
+    }
+
+    li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 700;
+      padding-left: 40px;
+
+    }
+  }
+}
+
+// .navigation {
+//   display: none;
+// }
+
+.main-nav{
+	display: none;
+}
+
+.show {
+  display: block;
+}
+
+
+
+/* "home" blokas */
+.home {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  justify-content: space-between;
+
+  div {
+    width: calc(33.3333% - 60px);
+
+    h2 {
+      margin-top: 100px;
+      margin-bottom: 55px;
+    }
+
+    p {
+      margin: 0 0 100px 0;
+    }
+  }
+}
+
+/* about me blokas */
+.about {
+  background-color: #f2f2f1;
+
+  .about_container {
+    // max-width: 1180px;
+    display: flex;
+
+    img {
+      width: calc(40% - 30px);
+      object-fit: cover;
+    }
+    // responsive dizainaas daromas pačiame gale per media
+    // užklausas (media) pa2iame css failo gale po to,
+    // kai viskas jau yra sura6yta, sutvarkytas dizainas.
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  }
+
+  .about_details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .about_column {
+      display: flex;
+      width: calc(50% - 50px);
+    }
+  }
+}
+
+/* skills blokas */
+
+.skills_container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  .skills_block {
+    width: calc(50% - 47px);
+    // flex: 1 1 auto;
+
+    .my_skills {
+      padding-bottom: 40px;
+
+      h2 {
+        margin-top: 0;
+      }
+    }
+    h3 {
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+
+    #contact_me {
+      color: #2ecc71;
+      font-size: 1.125rem;
+      font-weight: 700;
+      border: 3px solid #2ecc71;
+      padding: 20px 40px;
+      text-decoration: none;
+    }
+
+    .skills_scale {
+      padding-top: 13px;
+
+      progress[value] {
+        /* Reset the default appearance: 
+                WebKit/Blink (Chrome/Safari/Opera) */
+        -webkit-appearance: none;
+        appearance: none;
+
+        width: 100%;
+        height: 24px;
+      }
+
+      progress[value]::-webkit-progress-bar {
+        background-color: #eee;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+      }
+
+      progress[value]::-webkit-progress-value {
+        background-color: #2ecc71;
+      }
+
+      progress[value] {
+        /* Reset the default appearance: FIREFOX */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        /* Get rid of default border in Firefox. */
+        border: none;
+
+        /* Dimensions */
+        width: 100%;
+        height: 24px;
+      }
+
+      progress[value]::-moz-progress-bar {
+        background-color: #2ecc71;
+      }
+
+      .progress-bar span {
+        position: absolute;
+        top: 0;
+        display: block;
+        color: #fff;
+        text-align: center;
+        font-weight: 700;
+      }
+
+      .progress-bar {
+        display: block;
+        position: relative;
+        width: 100%;
+      }
+
+      progress[value] {
+        /* Reset the default appearance: Internet Explorer */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        /* Get rid of default border in Firefox. */
+        border: none;
+
+        /* Dimensions */
+        width: 100%;
+        height: 24px;
+
+        /* For IE10 */
+        color: #2ecc71;
+      }
+    }
+  }
+}
+
+/* sentiment blokas */
+
+.sentiment,
+.sentiment2 {
+  background-color: #f2f1f1;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  p {
+    text-align: center;
+  }
+}
+
+
+.sent-name {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+.sentiment2 .owl-carousel p {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+
+.sent-name {
+  font-weight: 700;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+
+  border-top: 20px solid #f2f1f1;
+  margin: 0 auto;
+}
+
+/* education/experience blokas */
+
+.education_experience {
+  margin-bottom: 100px;
+
+  .new {
+    border-bottom: 3px solid #f2f1f1;
+  }
+
+  .container {
+    padding-bottom: 100px;
+    padding-top: 100px;
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .education,
+    .experience {
+      display: flex;
+      justify-content: space-between;
+
+      .education_paragraph,
+      .experience_paragraph {
+        width: calc(50% - 47px);
+
+        .education_list,
+        .experience_list {
+          h3 {
+            margin-bottom: 0;
+          }
+
+          .education_date,
+          .experience_date {
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-bottom: 40px;
+          }
+
+          #diploma,
+          #photo {
+            color: #fff;
+            font-size: 1.125rem;
+            font-weight: 700;
+            border: 3px solid #2ecc71;
+            background-color: #2ecc71;
+            padding: 5px 10px;
+            text-decoration: none;
+          }
+
+          .education_description {
+            border-top: 3px solid #f2f1f1;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* galerija */
+
+.galery {
+  .container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .text-block {
+      text-align: center;
+      margin: 0 auto;
+
+      h2 {
+        margin: 0 auto;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+
+    .photo-carousel {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .photo {
+        width: calc(33, 3333% - 20px);
+        padding-bottom: 40px;
+        
+      }
+    }
+  }
+}
+/* contact me blokas */
+
+.contact-info {
+  background-color: #252e30;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  .container {
+    h2 {
+      color: #ffffff;
+    }
+    .contact-container {
+      display: flex;
+      justify-content: space-between;
+
+      .input {
+        width: calc(50% - 45px);
+
+        .name,
+        .email,
+        .email-me {
+          padding-bottom: 10px;
+        }
+
+        .email,
+        .email-me {
+          padding-top: 40px;
+        }
+
+        label {
+          color: #ffffff;
+
+          span {
+            color: #4b5456;
+          }
+        }
+
+        input {
+          background-color: #4b5456;
+          border: 0px;
+          width: 100%;
+          font-size: 1.125rem;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          color: #fff;
+        }
+
+        #message {
+          background-color: #4b5456;
+          border: 0px;
+          width: 100%;
+          font-size: 1.125rem;
+          color: #fff;
+          font-family: roboto;
+        }
+      }
+
+      button {
+        background: #191f21;
+        color: #ffffff;
+        border: 0px;
+        font-size: 1.125rem;
+        font-weight: 700;
+        margin-top: 40px;
+        padding: 20px 35px;
+      }
+      span {
+        display: inline-block;
+        min-width: 100px;
+        color: #ffffff;
+      }
+    }
+  }
+}
+/* social media buttons */
+.social-media {
+  background-color: #191f21;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .container {
+    text-align: center;
+  
+    h4 {
+      color: #4b5456;
+      margin: 0 auto;      
+      padding-bottom: 30px;
+    }
+    
+    a {
+      margin: 0 5px;
+    }
+    
+    .fa-facebook, .fa-linkedin {
+      
+      color: #566366;
+    }
+  }
+}
+
+/* Responsive design dalis */
+
+@media all and (max-width: 900px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .main-nav{
+    display: block;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+
+  .about,
+  .sentiment,
+  .education_experience,
+  .sentiment2,
+  .contact-info,
+  .social-media {
+    margin-right: 0;;
+    margin-left: 0;
+  }
+
+  .column {
+    width: 50%;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+
