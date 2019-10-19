@@ -27,40 +27,26 @@
     <!-- menu juosta -->
     <header>
         <section class="container">
-            <nav class="navigation">
-                
-                <div class="img">
-                    <img id="logo" src="assets/img/pslogo_04.jpg" alt="LP">
-                </div>
-                <ul>
-                    <li><a href="#home">HOME</a></li>
-                    <li><a href="#about_me">ABOUT ME</a></li>
-                    <li><a href="#skills">SKILLS</a></li>
-                    <li><a href="#education">EDUCATION</a></li>
-                    <li><a href="#experience">WORK EXPERIENCE</a></li>
-                    <li><a href="#photo galery">PHOTO GALERY</a></li>
-                    <li><a href="#contact me">CONTACT ME</a></li>
-                </ul>
-            </nav>
-
-            <a href="#main-menu"
-     id="main-menu-toggle"
-     class="menu-toggle"
-     aria-label="Open main menu">
-    <span class="sr-only">Open main menu</span>
-    <span class="fa fa-bars" aria-hidden="true"></span>
-  </a>
-            <!-- <button class="burger">Mobile menu</button> -->
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#">Menu 1</a></li>
-                    <li><a href="#">Menu 2</a></li>
-                    <li><a href="#">Menu 3</a></li>
-                    <li><a href="#">Menu 4</a></li>
-                    <li><a href="#">Menu 5</a></li>
-                    <li><a href="#">Menu 6</a></li>
-                </ul>
-            </nav>
+            <a href="#main-menu" id="main-menu-toggle" class="burger" aria-label="Open main menu">
+                <span class="sr-only">Open main menu</span>
+                <span class="fa fa-bars" aria-hidden="true"></span>
+            </a>
+            <div class="menu">
+                <nav class="main-nav">
+                    <div class="img">
+                        <img id="logo" src="assets/img/pslogo_04.jpg" alt="LP">
+                    </div>
+                    <ul>
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#about_me">ABOUT ME</a></li>
+                        <li><a href="#skills">SKILLS</a></li>
+                        <li><a href="#education">EDUCATION</a></li>
+                        <li><a href="#experience">WORK EXPERIENCE</a></li>
+                        <li><a href="#photo galery">PHOTO GALERY</a></li>
+                        <li><a href="#contact me">CONTACT ME</a></li>
+                    </ul>
+                </nav>
+            </div>
         </section>
     </header>
     <!-- "home" blokas -->
@@ -91,7 +77,7 @@
     <!-- "about me" blokas -->
     <section class="about">
         <div class="about_container">
-            <img src="assets/img/_DSC8968-compressor.jpg" alt="profile">
+            <img src="assets/img/profile_small-compressor.jpg" srcset="assets/img/profile_medium-compressor.jpg 1000w, assets/img/profile_large-compressor.jpg 2000w" alt="profile">
             <div id="about_me"></div>
             <div class="container">
 

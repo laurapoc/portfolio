@@ -76,47 +76,44 @@ header {
   z-index: 2;
   top: 0;
 
-  .navigation {
-    display: flex;
-    justify-content: space-between;
+  .burger {
+    display: none;
+    color: #ffffff;
+    font-size: 2rem;
+    padding: 20px;
 
-    .img {
+  }
+
+  .menu {
+    display: block;
+
+    .main-nav {
       display: flex;
-      align-self: center;
-    }
+      justify-content: space-between;
 
-    ul {
-      margin: 0;
-      padding: 30px 0 30px 0;
-      text-align: center;
-      display: flex;
-      list-style: none;
-    }
+      .img {
+        display: flex;
+        align-self: center;
+      }
 
-    li a {
-      text-decoration: none;
-      color: #ffffff;
-      font-size: 1rem;
-      font-weight: 700;
-      padding-left: 40px;
+      ul {
+        margin: 0;
+        padding: 30px 0 30px 0;
+        text-align: center;
+        display: flex;
+        list-style: none;
+      }
 
+      li a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 700;
+        padding-left: 40px;
+      }
     }
   }
 }
-
-// .navigation {
-//   display: none;
-// }
-
-.main-nav{
-	display: none;
-}
-
-.show {
-  display: block;
-}
-
-
 
 /* "home" blokas */
 .home {
@@ -297,7 +294,6 @@ header {
   }
 }
 
-
 .sent-name {
   font-size: 1.5rem;
   font-style: italic;
@@ -306,7 +302,6 @@ header {
   font-size: 1.5rem;
   font-style: italic;
 }
-
 
 .sent-name {
   font-weight: 700;
@@ -408,7 +403,6 @@ header {
       .photo {
         width: calc(33, 3333% - 20px);
         padding-bottom: 40px;
-        
       }
     }
   }
@@ -494,19 +488,19 @@ header {
 
   .container {
     text-align: center;
-  
+
     h4 {
       color: #4b5456;
-      margin: 0 auto;      
+      margin: 0 auto;
       padding-bottom: 30px;
     }
-    
+
     a {
       margin: 0 5px;
     }
-    
-    .fa-facebook, .fa-linkedin {
-      
+
+    .fa-facebook,
+    .fa-linkedin {
       color: #566366;
     }
   }
@@ -517,15 +511,39 @@ header {
 @media all and (max-width: 900px) {
   .container {
     flex-wrap: wrap;
+
+    .menu {
+      display: none;
+
+      .main-nav {
+        justify-content: flex-start;
+      ul {
+        flex-direction: column;
+        padding: 10px 0;
+        text-align: start;
+        flex-grow: 1;
+
+        li a {
+          padding-left: 20px;
+        }
+
+      }
+    }
+      #logo {
+        display: none;
+      }
+
+    }
+
+    .show {
+      display: block;
+    }
+
+    .burger {
+      display: block;
+    }
   }
 
-  .main-nav{
-    display: block;
-  }
-  
-  .show {
-    display: block;
-  }
   
 
   .about,
@@ -534,7 +552,7 @@ header {
   .sentiment2,
   .contact-info,
   .social-media {
-    margin-right: 0;;
+    margin-right: 0;
     margin-left: 0;
   }
 
@@ -543,11 +561,8 @@ header {
   }
 }
 
-@media all and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
-
-
-
+// @media all and (max-width: 600px) {
+//   .column {
+//     width: 100%;
+//   }
+// }

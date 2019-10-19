@@ -14,8 +14,8 @@ $(document).ready(function(){
     animationDuration: 500
 });
 
-let burger = document.querySelector(".menu-toggle");
-let menu = document.querySelector(".main-nav");
+let burger = document.querySelector(".burger");
+let menu = document.querySelector(".menu");
 burger.addEventListener("click", function(){
     menu.classList.toggle("show");
 });
