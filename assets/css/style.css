@@ -47,7 +47,7 @@ h3 {
   background-image: url("../img/_20190829_162550-compressor.jpg");
   background-size: cover;
   background-position: center;
-  height: 1000px;
+  min-height: 1000px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,7 +118,7 @@ header .menu .main-nav .img {
 
 header .menu .main-nav ul {
   margin: 0;
-  padding: 30px 0 30px 0;
+  padding: 30px 10px 30px 10px;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -147,6 +147,7 @@ header .menu .main-nav li a {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  padding: 0 2% 0 2%;
 }
 
 .home div {
@@ -180,10 +181,9 @@ header .menu .main-nav li a {
 }
 
 .about .about_container .container {
-  max-width: 680px;
+  width: 90%;
   margin: 0 auto;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 10% 100px 10%;
 }
 
 .about .about_details {
@@ -212,8 +212,7 @@ header .menu .main-nav li a {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 2% 100px 2%;
 }
 
 .skills_container .skills_block {
@@ -316,8 +315,7 @@ header .menu .main-nav li a {
 .sentiment,
 .sentiment2 {
   background-color: #f2f1f1;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 2% 100px 2%;
 }
 
 .sentiment p,
@@ -349,17 +347,12 @@ header .menu .main-nav li a {
 }
 
 /* education/experience blokas */
-.education_experience {
-  margin-bottom: 100px;
-}
-
 .education_experience .new {
   border-bottom: 3px solid #f2f1f1;
 }
 
 .education_experience .container {
-  padding-bottom: 100px;
-  padding-top: 100px;
+  padding: 100px 2% 100px 2%;
 }
 
 .education_experience .container h2 {
@@ -482,8 +475,12 @@ header .menu .main-nav li a {
 }
 
 .galery .container .photo-carousel .photo {
-  width: calc(33, 3333% - 20px);
-  padding-bottom: 40px;
+  width: calc(33.3333% - 20px);
+  padding: 0 20px 40px 20px;
+}
+
+.galery .container .photo-carousel .photo img {
+  width: 100%;
 }
 
 /* contact me blokas */
@@ -508,24 +505,29 @@ header .menu .main-nav li a {
 
 .contact-info .container .contact-container .input {
   width: calc(50% - 45px);
+  padding-right: 2%;
 }
 
-.contact-info .container .contact-container .input .name,
-.contact-info .container .contact-container .input .email,
-.contact-info .container .contact-container .input .email-me {
+.contact-info .container .contact-container .input form input {
+  width: 100%;
+}
+
+.contact-info .container .contact-container .input form .name,
+.contact-info .container .contact-container .input form .email,
+.contact-info .container .contact-container .input form .email-me {
   padding-bottom: 10px;
 }
 
-.contact-info .container .contact-container .input .email,
-.contact-info .container .contact-container .input .email-me {
+.contact-info .container .contact-container .input form .email,
+.contact-info .container .contact-container .input form .email-me {
   padding-top: 40px;
 }
 
-.contact-info .container .contact-container .input label {
+.contact-info .container .contact-container .input form label {
   color: #ffffff;
 }
 
-.contact-info .container .contact-container .input label span {
+.contact-info .container .contact-container .input form label span {
   color: #4b5456;
 }
 
@@ -591,7 +593,21 @@ header .menu .main-nav li a {
 }
 
 /* Responsive design dalis */
-@media all and (max-width: 900px) {
+@media all and (max-width: 1200px) {
+  /*about me blokas */
+  .about_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  /* menu juosta */
   .container {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -638,6 +654,202 @@ header .menu .main-nav li a {
   }
   .column {
     width: 50%;
+  }
+  /*home blokas */
+  .home {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    text-align: center;
+  }
+  .home div {
+    width: 80%;
+    margin: 5% 10%;
+  }
+  .home div h2 {
+    margin: 0 auto;
+  }
+  .home div p {
+    margin: 0 auto;
+  }
+  /*about me blokas */
+  .about_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  /*skills blokas */
+  .container .skills_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .container .skills_container .skills_block {
+    width: 80%;
+  }
+  /*education/experience blokas*/
+  .education_experience .new h2 {
+    text-align: center;
+  }
+  .education_experience .new .education,
+  .education_experience .new .experience {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .education_experience .new .education .education_paragraph,
+  .education_experience .new .experience .education_paragraph {
+    width: 80%;
+  }
+  .education_experience .container h2 {
+    text-align: center;
+  }
+  .education_experience .container .experience {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .education_experience .container .experience .experience_paragraph {
+    width: 80%;
+  }
+  /* galery blokas */
+  .galery .container .galery-block .photo-carousel .photo {
+    width: calc(50% - 20px);
+  }
+  .galery .container .galery-block .photo-carousel .photo img {
+    width: 100%;
+  }
+  /* contact me blokas */
+  .contact-info .container h2 {
+    padding-left: 5%;
+  }
+  .contact-info .container .contact-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .contact-info .container .contact-container .input {
+    width: 90%;
+  }
+}
+
+@media all and (max-width: 600px) {
+  /* bendros taisyklės */
+  p {
+    font-size: 0.875rem;
+  }
+  /* virsutinis langas su nuotrauka */
+  .hello {
+    min-height: 100vh;
+  }
+  /* about me blokas */
+  .about .about_container .container {
+    padding-top: 5%;
+    padding-bottom: 10%;
+  }
+  .about .about_container .container .about_details {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .about .about_container .container .about_details .about_column {
+    width: 100%;
+  }
+  /*skills blokas */
+  .container .skills_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  /* galery blokas */
+  .galery .container {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  .galery .container .galery-block .photo-carousel {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .galery .container .galery-block .photo-carousel .photo {
+    width: 100%;
+  }
+  .galery .container .galery-block .photo-carousel .photo img {
+    width: 100%;
+  }
+  /*sentiment blokas */
+  .sentiment,
+  .sentiment2 {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  /* education/experience blokas*/
+  .education_experience .container,
+  .education_experience .new {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  /* contact me blokas */
+  .contact-info {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  .contact-info .container h2 {
+    padding-left: 5%;
+  }
+  .contact-info .container .contact-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .contact-info .container .contact-container .input {
+    width: 90%;
+  }
+  .contact-info .container .contact-container .input .contact {
+    padding-top: 2%;
+  }
+}
+
+@media all and (max-width: 400px) {
+  /* virsutinis langas su nuotrauka */
+  .hello {
+    min-height: 100vh;
   }
 }
 

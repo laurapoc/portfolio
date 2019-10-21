@@ -46,7 +46,7 @@ h3 {
   background-image: url("../img/_20190829_162550-compressor.jpg");
   background-size: cover;
   background-position: center;
-  height: 1000px;
+  min-height: 1000px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,7 +81,6 @@ header {
     color: #ffffff;
     font-size: 2rem;
     padding: 20px;
-
   }
 
   .menu {
@@ -98,7 +97,7 @@ header {
 
       ul {
         margin: 0;
-        padding: 30px 0 30px 0;
+        padding: 30px 10px 30px 10px;
         text-align: center;
         display: flex;
         list-style: none;
@@ -121,6 +120,7 @@ header {
   flex-direction: row;
   background-color: #ffffff;
   justify-content: space-between;
+  padding: 0 2% 0 2%;
 
   div {
     width: calc(33.3333% - 60px);
@@ -141,22 +141,17 @@ header {
   background-color: #f2f2f1;
 
   .about_container {
-    // max-width: 1180px;
     display: flex;
 
     img {
       width: calc(40% - 30px);
       object-fit: cover;
     }
-    // responsive dizainaas daromas pačiame gale per media
-    // užklausas (media) pa2iame css failo gale po to,
-    // kai viskas jau yra sura6yta, sutvarkytas dizainas.
 
     .container {
-      max-width: 680px;
+      width: 90%;
       margin: 0 auto;
-      padding-top: 100px;
-      padding-bottom: 100px;
+      padding: 100px 10% 100px 10%;
     }
   }
 
@@ -177,8 +172,7 @@ header {
 .skills_container {
   display: flex;
   justify-content: space-between;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 2% 100px 2%;
 
   .skills_block {
     width: calc(50% - 47px);
@@ -286,8 +280,7 @@ header {
 .sentiment,
 .sentiment2 {
   background-color: #f2f1f1;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 2% 100px 2%;
 
   p {
     text-align: center;
@@ -320,20 +313,14 @@ header {
 /* education/experience blokas */
 
 .education_experience {
-  margin-bottom: 100px;
-
   .new {
     border-bottom: 3px solid #f2f1f1;
   }
-
   .container {
-    padding-bottom: 100px;
-    padding-top: 100px;
-
+    padding: 100px 2% 100px 2%;
     h2 {
       margin-top: 0;
     }
-
     .education,
     .experience {
       display: flex;
@@ -366,7 +353,6 @@ header {
             padding: 5px 10px;
             text-decoration: none;
           }
-
           .education_description {
             border-top: 3px solid #f2f1f1;
           }
@@ -401,8 +387,12 @@ header {
       justify-content: space-between;
 
       .photo {
-        width: calc(33, 3333% - 20px);
-        padding-bottom: 40px;
+        width: calc(33.3333% - 20px);
+        padding: 0 20px 40px 20px;
+
+        img {
+          width: 100%;
+        }
       }
     }
   }
@@ -423,23 +413,29 @@ header {
 
       .input {
         width: calc(50% - 45px);
+        padding-right: 2%;
+        form {
+          input {
+            width: 100%;
+          }
 
-        .name,
-        .email,
-        .email-me {
-          padding-bottom: 10px;
-        }
+          .name,
+          .email,
+          .email-me {
+            padding-bottom: 10px;
+          }
 
-        .email,
-        .email-me {
-          padding-top: 40px;
-        }
+          .email,
+          .email-me {
+            padding-top: 40px;
+          }
 
-        label {
-          color: #ffffff;
+          label {
+            color: #ffffff;
 
-          span {
-            color: #4b5456;
+            span {
+              color: #4b5456;
+            }
           }
         }
 
@@ -507,8 +503,16 @@ header {
 }
 
 /* Responsive design dalis */
+@media all and (max-width: 1200px) {
+  /*about me blokas */
+  .about_container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
-@media all and (max-width: 900px) {
+@media all and (max-width: 1000px) {
+  /* menu juosta */
   .container {
     flex-wrap: wrap;
 
@@ -517,22 +521,20 @@ header {
 
       .main-nav {
         justify-content: flex-start;
-      ul {
-        flex-direction: column;
-        padding: 10px 0;
-        text-align: start;
-        flex-grow: 1;
+        ul {
+          flex-direction: column;
+          padding: 10px 0;
+          text-align: start;
+          flex-grow: 1;
 
-        li a {
-          padding-left: 20px;
+          li a {
+            padding-left: 20px;
+          }
         }
-
       }
-    }
       #logo {
         display: none;
       }
-
     }
 
     .show {
@@ -543,8 +545,6 @@ header {
       display: block;
     }
   }
-
-  
 
   .about,
   .sentiment,
@@ -559,10 +559,228 @@ header {
   .column {
     width: 50%;
   }
+  /*home blokas */
+  .home {
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+
+    div {
+      width: 80%;
+      margin: 5% 10%;
+
+      h2 {
+        margin: 0 auto;
+      }
+
+      p {
+        margin: 0 auto;
+      }
+    }
+  }
+  /*about me blokas */
+  .about_container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /*skills blokas */
+  .container {
+    .skills_container {
+      flex-direction: column;
+      align-items: center;
+
+      .skills_block {
+        width: 80%;
+        .skills_contacts {
+          .my_skills {
+          }
+        }
+        .skills_scale {
+          h3 {
+          }
+          .progress-bar {
+          }
+        }
+      }
+    }
+  }
+
+  /*education/experience blokas*/
+  .education_experience {
+    .new {
+      h2 {
+        text-align: center;
+      }
+
+      .education,
+      .experience {
+        flex-direction: column;
+        align-items: center;
+
+        .education_paragraph {
+          // flex-grow: 1;
+          width: 80%;
+        }
+      }
+    }
+
+    .container {
+      h2 {
+        text-align: center;
+      }
+      .experience {
+        flex-direction: column;
+        align-items: center;
+
+        .experience_paragraph {
+          width: 80%;
+        }
+      }
+    }
+  }
+  /* galery blokas */
+  .galery {
+    .container {
+      .galery-block {
+        .photo-carousel {
+          .photo {
+            width: calc(50% - 20px);
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* contact me blokas */
+  .contact-info {
+    .container {
+      h2 {
+        padding-left: 5%;
+      }
+      .contact-container {
+        flex-direction: column;
+        align-items: center;
+        .input {
+          width: 90%;
+          .contact {
+          }
+          form {
+            input {
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
-// @media all and (max-width: 600px) {
-//   .column {
-//     width: 100%;
-//   }
-// }
+@media all and (max-width: 600px) {
+  // .column {
+  //   width: 100%;
+  // }
+
+  /* bendros taisyklės */
+  p {
+    font-size: 0.875rem;
+  }
+  /* virsutinis langas su nuotrauka */
+  .hello {
+    min-height: 100vh;
+  }
+
+  /* about me blokas */
+  .about {
+    .about_container {
+      .container {
+        padding-top: 5%;
+        padding-bottom: 10%;
+        .about_details {
+          flex-direction: column;
+          .about_column {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  /*skills blokas */
+  .container {
+    .skills_container {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 10%;
+      padding-bottom: 10%;
+    }
+  }
+
+  /* galery blokas */
+  .galery {
+    .container {
+      padding-top: 10%;
+      padding-bottom: 10%;
+      .galery-block {
+        .photo-carousel {
+          flex-direction: column;
+          .photo {
+            width: 100%;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*sentiment blokas */
+  .sentiment,
+  .sentiment2 {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  /* education/experience blokas*/
+  .education_experience {
+    .container,
+    .new {
+      padding-top: 10%;
+      padding-bottom: 10%;
+    }
+  }
+
+  /* contact me blokas */
+  .contact-info {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    .container {
+      h2 {
+        padding-left: 5%;
+      }
+      .contact-container {
+        flex-direction: column;
+        align-items: center;
+        .input {
+          width: 90%;
+          .contact {
+            padding-top: 2%;
+          }
+          form {
+            input {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 400px) {
+  /* virsutinis langas su nuotrauka */
+  .hello {
+    min-height: 100vh;
+  }
+}
