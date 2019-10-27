@@ -35,10 +35,11 @@ h3 {
   margin: 0 auto;
 }
 
-#icon {
+.icon {
   color: #2ecc71;
   margin-top: 25px;
   margin-right: 30px;
+  font-size: 30px;
 }
 
 /* pagrindinė nuotrauka */
@@ -176,7 +177,6 @@ header {
 
   .skills_block {
     width: calc(50% - 47px);
-    // flex: 1 1 auto;
 
     .my_skills {
       padding-bottom: 40px;
@@ -343,8 +343,12 @@ header {
             padding-bottom: 40px;
           }
 
-          #diploma,
-          #photo {
+          #diploma1,
+          #diploma2,
+          #photo1,
+          #photo2,
+          #photo3,
+          #photo4 {
             color: #fff;
             font-size: 1.125rem;
             font-weight: 700;
@@ -414,6 +418,12 @@ header {
       .input {
         width: calc(50% - 45px);
         padding-right: 2%;
+        .contact {
+          .contact-link {
+            text-decoration: none;
+            color: #4b5456;
+          }
+        }
         form {
           input {
             width: 100%;
@@ -438,24 +448,27 @@ header {
             }
           }
         }
-
-        input {
-          background-color: #4b5456;
-          border: 0px;
-          width: 100%;
-          font-size: 1.125rem;
-          padding-top: 15px;
-          padding-bottom: 15px;
-          color: #fff;
+        .form-input {
+          .name-input,
+          .email-input {
+            background-color: #4b5456;
+            border: 0px;
+            width: 100%;
+            font-size: 1.125rem;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            color: #fff;
+          }
         }
-
-        #message {
-          background-color: #4b5456;
-          border: 0px;
-          width: 100%;
-          font-size: 1.125rem;
-          color: #fff;
-          font-family: roboto;
+        .form-textarea {
+          .email-me-textarea {
+            background-color: #4b5456;
+            border: 0px;
+            width: 100%;
+            font-size: 1.125rem;
+            color: #fff;
+            font-family: roboto;
+          }
         }
       }
 
@@ -468,7 +481,7 @@ header {
         margin-top: 40px;
         padding: 20px 35px;
       }
-      span {
+      .span-link {
         display: inline-block;
         min-width: 100px;
         color: #ffffff;
@@ -491,8 +504,13 @@ header {
       padding-bottom: 30px;
     }
 
+    .links {
+      font-size: 40px;
+    }
+
     a {
       margin: 0 5px;
+
     }
 
     .fa-facebook,
@@ -592,16 +610,8 @@ header {
 
       .skills_block {
         width: 80%;
-        .skills_contacts {
-          .my_skills {
-          }
-        }
-        .skills_scale {
-          h3 {
-          }
-          .progress-bar {
-          }
-        }
+      
+
       }
     }
   }
@@ -665,12 +675,8 @@ header {
         align-items: center;
         .input {
           width: 90%;
-          .contact {
-          }
-          form {
-            input {
-            }
-          }
+
+
         }
       }
     }
@@ -678,10 +684,6 @@ header {
 }
 
 @media all and (max-width: 600px) {
-  // .column {
-  //   width: 100%;
-  // }
-
   /* bendros taisyklės */
   p {
     font-size: 0.875rem;
@@ -768,10 +770,7 @@ header {
           .contact {
             padding-top: 2%;
           }
-          form {
-            input {
-            }
-          }
+
         }
       }
     }

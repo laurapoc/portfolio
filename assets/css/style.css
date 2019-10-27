@@ -36,10 +36,11 @@ h3 {
   margin: 0 auto;
 }
 
-#icon {
+.icon {
   color: #2ecc71;
   margin-top: 25px;
   margin-right: 30px;
+  font-size: 30px;
 }
 
 /* pagrindinė nuotrauka */
@@ -408,22 +409,54 @@ header .menu .main-nav li a {
   padding-bottom: 40px;
 }
 
-.education_experience .container .education .education_paragraph .education_list #diploma,
-.education_experience .container .education .education_paragraph .education_list #photo,
-.education_experience .container .education .education_paragraph .experience_list #diploma,
-.education_experience .container .education .education_paragraph .experience_list #photo,
-.education_experience .container .education .experience_paragraph .education_list #diploma,
-.education_experience .container .education .experience_paragraph .education_list #photo,
-.education_experience .container .education .experience_paragraph .experience_list #diploma,
-.education_experience .container .education .experience_paragraph .experience_list #photo,
-.education_experience .container .experience .education_paragraph .education_list #diploma,
-.education_experience .container .experience .education_paragraph .education_list #photo,
-.education_experience .container .experience .education_paragraph .experience_list #diploma,
-.education_experience .container .experience .education_paragraph .experience_list #photo,
-.education_experience .container .experience .experience_paragraph .education_list #diploma,
-.education_experience .container .experience .experience_paragraph .education_list #photo,
-.education_experience .container .experience .experience_paragraph .experience_list #diploma,
-.education_experience .container .experience .experience_paragraph .experience_list #photo {
+.education_experience .container .education .education_paragraph .education_list #diploma1,
+.education_experience .container .education .education_paragraph .education_list #diploma2,
+.education_experience .container .education .education_paragraph .education_list #photo1,
+.education_experience .container .education .education_paragraph .education_list #photo2,
+.education_experience .container .education .education_paragraph .education_list #photo3,
+.education_experience .container .education .education_paragraph .education_list #photo4,
+.education_experience .container .education .education_paragraph .experience_list #diploma1,
+.education_experience .container .education .education_paragraph .experience_list #diploma2,
+.education_experience .container .education .education_paragraph .experience_list #photo1,
+.education_experience .container .education .education_paragraph .experience_list #photo2,
+.education_experience .container .education .education_paragraph .experience_list #photo3,
+.education_experience .container .education .education_paragraph .experience_list #photo4,
+.education_experience .container .education .experience_paragraph .education_list #diploma1,
+.education_experience .container .education .experience_paragraph .education_list #diploma2,
+.education_experience .container .education .experience_paragraph .education_list #photo1,
+.education_experience .container .education .experience_paragraph .education_list #photo2,
+.education_experience .container .education .experience_paragraph .education_list #photo3,
+.education_experience .container .education .experience_paragraph .education_list #photo4,
+.education_experience .container .education .experience_paragraph .experience_list #diploma1,
+.education_experience .container .education .experience_paragraph .experience_list #diploma2,
+.education_experience .container .education .experience_paragraph .experience_list #photo1,
+.education_experience .container .education .experience_paragraph .experience_list #photo2,
+.education_experience .container .education .experience_paragraph .experience_list #photo3,
+.education_experience .container .education .experience_paragraph .experience_list #photo4,
+.education_experience .container .experience .education_paragraph .education_list #diploma1,
+.education_experience .container .experience .education_paragraph .education_list #diploma2,
+.education_experience .container .experience .education_paragraph .education_list #photo1,
+.education_experience .container .experience .education_paragraph .education_list #photo2,
+.education_experience .container .experience .education_paragraph .education_list #photo3,
+.education_experience .container .experience .education_paragraph .education_list #photo4,
+.education_experience .container .experience .education_paragraph .experience_list #diploma1,
+.education_experience .container .experience .education_paragraph .experience_list #diploma2,
+.education_experience .container .experience .education_paragraph .experience_list #photo1,
+.education_experience .container .experience .education_paragraph .experience_list #photo2,
+.education_experience .container .experience .education_paragraph .experience_list #photo3,
+.education_experience .container .experience .education_paragraph .experience_list #photo4,
+.education_experience .container .experience .experience_paragraph .education_list #diploma1,
+.education_experience .container .experience .experience_paragraph .education_list #diploma2,
+.education_experience .container .experience .experience_paragraph .education_list #photo1,
+.education_experience .container .experience .experience_paragraph .education_list #photo2,
+.education_experience .container .experience .experience_paragraph .education_list #photo3,
+.education_experience .container .experience .experience_paragraph .education_list #photo4,
+.education_experience .container .experience .experience_paragraph .experience_list #diploma1,
+.education_experience .container .experience .experience_paragraph .experience_list #diploma2,
+.education_experience .container .experience .experience_paragraph .experience_list #photo1,
+.education_experience .container .experience .experience_paragraph .experience_list #photo2,
+.education_experience .container .experience .experience_paragraph .experience_list #photo3,
+.education_experience .container .experience .experience_paragraph .experience_list #photo4 {
   color: #fff;
   font-size: 1.125rem;
   font-weight: 700;
@@ -508,6 +541,11 @@ header .menu .main-nav li a {
   padding-right: 2%;
 }
 
+.contact-info .container .contact-container .input .contact .contact-link {
+  text-decoration: none;
+  color: #4b5456;
+}
+
 .contact-info .container .contact-container .input form input {
   width: 100%;
 }
@@ -531,7 +569,8 @@ header .menu .main-nav li a {
   color: #4b5456;
 }
 
-.contact-info .container .contact-container .input input {
+.contact-info .container .contact-container .input .form-input .name-input,
+.contact-info .container .contact-container .input .form-input .email-input {
   background-color: #4b5456;
   border: 0px;
   width: 100%;
@@ -541,7 +580,7 @@ header .menu .main-nav li a {
   color: #fff;
 }
 
-.contact-info .container .contact-container .input #message {
+.contact-info .container .contact-container .input .form-textarea .email-me-textarea {
   background-color: #4b5456;
   border: 0px;
   width: 100%;
@@ -560,7 +599,7 @@ header .menu .main-nav li a {
   padding: 20px 35px;
 }
 
-.contact-info .container .contact-container span {
+.contact-info .container .contact-container .span-link {
   display: inline-block;
   min-width: 100px;
   color: #ffffff;
@@ -581,6 +620,10 @@ header .menu .main-nav li a {
   color: #4b5456;
   margin: 0 auto;
   padding-bottom: 30px;
+}
+
+.social-media .container .links {
+  font-size: 40px;
 }
 
 .social-media .container a {
