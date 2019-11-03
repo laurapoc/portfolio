@@ -288,7 +288,9 @@ header .menu .main-nav li a {
   top: 0;
   display: block;
   color: #fff;
-  text-align: center;
+  text-align: left;
+  padding-left: 1%;
+  padding-top: 0.5%;
   font-weight: 700;
 }
 
@@ -389,74 +391,46 @@ header .menu .main-nav li a {
 }
 
 .education_experience .container .education .education_paragraph .education_list .education_date,
-.education_experience .container .education .education_paragraph .education_list .experience_date,
 .education_experience .container .education .education_paragraph .experience_list .education_date,
-.education_experience .container .education .education_paragraph .experience_list .experience_date,
 .education_experience .container .education .experience_paragraph .education_list .education_date,
-.education_experience .container .education .experience_paragraph .education_list .experience_date,
 .education_experience .container .education .experience_paragraph .experience_list .education_date,
-.education_experience .container .education .experience_paragraph .experience_list .experience_date,
 .education_experience .container .experience .education_paragraph .education_list .education_date,
-.education_experience .container .experience .education_paragraph .education_list .experience_date,
 .education_experience .container .experience .education_paragraph .experience_list .education_date,
-.education_experience .container .experience .education_paragraph .experience_list .experience_date,
 .education_experience .container .experience .experience_paragraph .education_list .education_date,
-.education_experience .container .experience .experience_paragraph .education_list .experience_date,
-.education_experience .container .experience .experience_paragraph .experience_list .education_date,
-.education_experience .container .experience .experience_paragraph .experience_list .experience_date {
+.education_experience .container .experience .experience_paragraph .experience_list .education_date {
   margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 40px;
 }
 
+.education_experience .container .education .education_paragraph .education_list .experience_date,
+.education_experience .container .education .education_paragraph .experience_list .experience_date,
+.education_experience .container .education .experience_paragraph .education_list .experience_date,
+.education_experience .container .education .experience_paragraph .experience_list .experience_date,
+.education_experience .container .experience .education_paragraph .education_list .experience_date,
+.education_experience .container .experience .education_paragraph .experience_list .experience_date,
+.education_experience .container .experience .experience_paragraph .education_list .experience_date,
+.education_experience .container .experience .experience_paragraph .experience_list .experience_date {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .education_experience .container .education .education_paragraph .education_list #diploma1,
 .education_experience .container .education .education_paragraph .education_list #diploma2,
-.education_experience .container .education .education_paragraph .education_list #photo1,
-.education_experience .container .education .education_paragraph .education_list #photo2,
-.education_experience .container .education .education_paragraph .education_list #photo3,
-.education_experience .container .education .education_paragraph .education_list #photo4,
 .education_experience .container .education .education_paragraph .experience_list #diploma1,
 .education_experience .container .education .education_paragraph .experience_list #diploma2,
-.education_experience .container .education .education_paragraph .experience_list #photo1,
-.education_experience .container .education .education_paragraph .experience_list #photo2,
-.education_experience .container .education .education_paragraph .experience_list #photo3,
-.education_experience .container .education .education_paragraph .experience_list #photo4,
 .education_experience .container .education .experience_paragraph .education_list #diploma1,
 .education_experience .container .education .experience_paragraph .education_list #diploma2,
-.education_experience .container .education .experience_paragraph .education_list #photo1,
-.education_experience .container .education .experience_paragraph .education_list #photo2,
-.education_experience .container .education .experience_paragraph .education_list #photo3,
-.education_experience .container .education .experience_paragraph .education_list #photo4,
 .education_experience .container .education .experience_paragraph .experience_list #diploma1,
 .education_experience .container .education .experience_paragraph .experience_list #diploma2,
-.education_experience .container .education .experience_paragraph .experience_list #photo1,
-.education_experience .container .education .experience_paragraph .experience_list #photo2,
-.education_experience .container .education .experience_paragraph .experience_list #photo3,
-.education_experience .container .education .experience_paragraph .experience_list #photo4,
 .education_experience .container .experience .education_paragraph .education_list #diploma1,
 .education_experience .container .experience .education_paragraph .education_list #diploma2,
-.education_experience .container .experience .education_paragraph .education_list #photo1,
-.education_experience .container .experience .education_paragraph .education_list #photo2,
-.education_experience .container .experience .education_paragraph .education_list #photo3,
-.education_experience .container .experience .education_paragraph .education_list #photo4,
 .education_experience .container .experience .education_paragraph .experience_list #diploma1,
 .education_experience .container .experience .education_paragraph .experience_list #diploma2,
-.education_experience .container .experience .education_paragraph .experience_list #photo1,
-.education_experience .container .experience .education_paragraph .experience_list #photo2,
-.education_experience .container .experience .education_paragraph .experience_list #photo3,
-.education_experience .container .experience .education_paragraph .experience_list #photo4,
 .education_experience .container .experience .experience_paragraph .education_list #diploma1,
 .education_experience .container .experience .experience_paragraph .education_list #diploma2,
-.education_experience .container .experience .experience_paragraph .education_list #photo1,
-.education_experience .container .experience .experience_paragraph .education_list #photo2,
-.education_experience .container .experience .experience_paragraph .education_list #photo3,
-.education_experience .container .experience .experience_paragraph .education_list #photo4,
 .education_experience .container .experience .experience_paragraph .experience_list #diploma1,
-.education_experience .container .experience .experience_paragraph .experience_list #diploma2,
-.education_experience .container .experience .experience_paragraph .experience_list #photo1,
-.education_experience .container .experience .experience_paragraph .experience_list #photo2,
-.education_experience .container .experience .experience_paragraph .experience_list #photo3,
-.education_experience .container .experience .experience_paragraph .experience_list #photo4 {
+.education_experience .container .experience .experience_paragraph .experience_list #diploma2 {
   color: #fff;
   font-size: 1.125rem;
   font-weight: 700;
@@ -474,7 +448,7 @@ header .menu .main-nav li a {
 .education_experience .container .experience .education_paragraph .experience_list .education_description,
 .education_experience .container .experience .experience_paragraph .education_list .education_description,
 .education_experience .container .experience .experience_paragraph .experience_list .education_description {
-  border-top: 3px solid #f2f1f1;
+  border-bottom: 3px solid #f2f1f1;
 }
 
 /* galerija */
@@ -630,8 +604,7 @@ header .menu .main-nav li a {
   margin: 0 5px;
 }
 
-.social-media .container .fa-facebook,
-.social-media .container .fa-linkedin {
+.social-media .container i {
   color: #566366;
 }
 

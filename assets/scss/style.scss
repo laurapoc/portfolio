@@ -245,7 +245,9 @@ header {
         top: 0;
         display: block;
         color: #fff;
-        text-align: center;
+        text-align: left;
+        padding-left: 1%;
+        padding-top: 0.5%;
         font-weight: 700;
       }
 
@@ -336,19 +338,21 @@ header {
             margin-bottom: 0;
           }
 
-          .education_date,
-          .experience_date {
+          .education_date {
             margin-top: 0;
             margin-bottom: 0;
             padding-bottom: 40px;
           }
 
+ 
+          .experience_date {
+            margin-top: 0;
+            margin-bottom: 0;
+ 
+          }
+
           #diploma1,
-          #diploma2,
-          #photo1,
-          #photo2,
-          #photo3,
-          #photo4 {
+          #diploma2 {
             color: #fff;
             font-size: 1.125rem;
             font-weight: 700;
@@ -357,8 +361,9 @@ header {
             padding: 5px 10px;
             text-decoration: none;
           }
+          
           .education_description {
-            border-top: 3px solid #f2f1f1;
+            border-bottom: 3px solid #f2f1f1;
           }
         }
       }
@@ -513,8 +518,7 @@ header {
 
     }
 
-    .fa-facebook,
-    .fa-linkedin {
+    i {
       color: #566366;
     }
   }
