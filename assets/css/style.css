@@ -96,6 +96,10 @@ header .burger {
   padding: 20px;
 }
 
+header .logo-img {
+  display: none;
+}
+
 header .menu {
   display: block;
 }
@@ -115,6 +119,7 @@ header .menu .main-nav .img {
   display: flex;
   -ms-flex-item-align: center;
   align-self: center;
+  padding-left: 0.5%;
 }
 
 header .menu .main-nav ul {
@@ -205,6 +210,10 @@ header .menu .main-nav li a {
   width: calc(50% - 50px);
 }
 
+.about .about_details .about_column .icon i {
+  width: 30px;
+}
+
 /* skills blokas */
 .skills_container {
   display: -webkit-box;
@@ -257,7 +266,7 @@ header .menu .main-nav li a {
 }
 
 .skills_container .skills_block .skills_scale progress[value]::-webkit-progress-bar {
-  background-color: #eee;
+  background-color: #cccccc;
   border-radius: 2px;
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
@@ -272,6 +281,7 @@ header .menu .main-nav li a {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  background-color: #cccccc;
   /* Get rid of default border in Firefox. */
   border: none;
   /* Dimensions */
@@ -305,6 +315,7 @@ header .menu .main-nav li a {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  background-color: #cccccc;
   /* Get rid of default border in Firefox. */
   border: none;
   /* Dimensions */
@@ -470,6 +481,21 @@ header .menu .main-nav li a {
   text-align: center;
 }
 
+.galery .container .galery-block {
+  display: none;
+}
+
+.galery .container .galery-toggle {
+  display: block;
+  font-size: 2rem;
+  color: #4b5456;
+  text-align: center;
+}
+
+.galery .container .show {
+  display: block;
+}
+
 .galery .container .photo-carousel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -488,6 +514,10 @@ header .menu .main-nav li a {
 
 .galery .container .photo-carousel .photo img {
   width: 100%;
+}
+
+.galery .container .photo-carousel .photo .show {
+  display: block;
 }
 
 /* contact me blokas */
@@ -622,11 +652,18 @@ header .menu .main-nav li a {
   }
 }
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1150px) {
   /* menu juosta */
-  .container {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+  .container .burger-menu-line {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .container .burger-menu-line .logo-img {
+    display: block;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
   }
   .container .menu {
     display: none;
@@ -650,7 +687,7 @@ header .menu .main-nav li a {
   .container .menu .main-nav ul li a {
     padding-left: 20px;
   }
-  .container .menu #logo {
+  .container .menu .main-nav #logo {
     display: none;
   }
   .container .show {
@@ -862,10 +899,17 @@ header .menu .main-nav li a {
   }
 }
 
-@media all and (max-width: 400px) {
+@media all and (max-width: 420px) {
   /* virsutinis langas su nuotrauka */
   .hello {
     min-height: 100vh;
+  }
+  .hello h1 {
+    font-size: 2.5rem;
+  }
+  /* skills blokas */
+  #skills #contact_me {
+    padding: 10px 20px;
   }
 }
 

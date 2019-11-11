@@ -83,6 +83,9 @@ header {
     font-size: 2rem;
     padding: 20px;
   }
+  .logo-img {
+    display: none;
+  }
 
   .menu {
     display: block;
@@ -94,6 +97,7 @@ header {
       .img {
         display: flex;
         align-self: center;
+        padding-left: 0.5%;
       }
 
       ul {
@@ -164,6 +168,12 @@ header {
     .about_column {
       display: flex;
       width: calc(50% - 50px);
+
+      .icon {
+        i {
+          width: 30px;
+        }
+      }
     }
   }
 }
@@ -213,7 +223,7 @@ header {
       }
 
       progress[value]::-webkit-progress-bar {
-        background-color: #eee;
+        background-color: rgb(204, 204, 204);
         border-radius: 2px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
       }
@@ -227,6 +237,8 @@ header {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
+        background-color: rgb(204, 204, 204);
+        
 
         /* Get rid of default border in Firefox. */
         border: none;
@@ -262,6 +274,7 @@ header {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
+        background-color: rgb(204, 204, 204);
 
         /* Get rid of default border in Firefox. */
         border: none;
@@ -344,11 +357,9 @@ header {
             padding-bottom: 40px;
           }
 
- 
           .experience_date {
             margin-top: 0;
             margin-bottom: 0;
- 
           }
 
           #diploma1,
@@ -361,7 +372,7 @@ header {
             padding: 5px 10px;
             text-decoration: none;
           }
-          
+
           .education_description {
             border-bottom: 3px solid #f2f1f1;
           }
@@ -389,6 +400,19 @@ header {
         text-align: center;
       }
     }
+    .galery-block {
+      display: none;
+    }
+    .galery-toggle {
+      display: block;
+      font-size: 2rem;
+      color: #4b5456;
+      text-align: center;
+    }
+
+    .show {
+      display: block;
+    }
 
     .photo-carousel {
       display: flex;
@@ -401,6 +425,9 @@ header {
 
         img {
           width: 100%;
+        }
+        .show {
+          display: block;
         }
       }
     }
@@ -515,7 +542,6 @@ header {
 
     a {
       margin: 0 5px;
-
     }
 
     i {
@@ -533,10 +559,16 @@ header {
   }
 }
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1150px) {
   /* menu juosta */
   .container {
-    flex-wrap: wrap;
+    .burger-menu-line {
+      display: flex;
+      .logo-img {
+        display: block;
+        align-self: center;
+      }
+    }
 
     .menu {
       display: none;
@@ -553,9 +585,9 @@ header {
             padding-left: 20px;
           }
         }
-      }
-      #logo {
-        display: none;
+        #logo {
+          display: none;
+        }
       }
     }
 
@@ -614,8 +646,6 @@ header {
 
       .skills_block {
         width: 80%;
-      
-
       }
     }
   }
@@ -633,7 +663,6 @@ header {
         align-items: center;
 
         .education_paragraph {
-          // flex-grow: 1;
           width: 80%;
         }
       }
@@ -679,8 +708,6 @@ header {
         align-items: center;
         .input {
           width: 90%;
-
-
         }
       }
     }
@@ -774,16 +801,24 @@ header {
           .contact {
             padding-top: 2%;
           }
-
         }
       }
     }
   }
 }
 
-@media all and (max-width: 400px) {
+@media all and (max-width: 420px) {
   /* virsutinis langas su nuotrauka */
   .hello {
     min-height: 100vh;
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+  /* skills blokas */
+  #skills {
+      #contact_me {
+        padding: 10px 20px;
+      }
   }
 }

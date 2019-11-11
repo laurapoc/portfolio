@@ -19,3 +19,9 @@ let menu = document.querySelector(".menu");
 burger.addEventListener("click", function(){
     menu.classList.toggle("show");
 });
+
+let sort = document.querySelector(".galery-toggle");
+let galeryMenu = document.querySelector(".galery-block");
+sort.addEventListener("click", function(){
+    galeryMenu.classList.toggle("show");
+});
