@@ -426,22 +426,14 @@ header .menu .main-nav li a {
   margin-bottom: 0;
 }
 
-.education_experience .container .education .education_paragraph .education_list #diploma1,
-.education_experience .container .education .education_paragraph .education_list #diploma2,
-.education_experience .container .education .education_paragraph .experience_list #diploma1,
-.education_experience .container .education .education_paragraph .experience_list #diploma2,
-.education_experience .container .education .experience_paragraph .education_list #diploma1,
-.education_experience .container .education .experience_paragraph .education_list #diploma2,
-.education_experience .container .education .experience_paragraph .experience_list #diploma1,
-.education_experience .container .education .experience_paragraph .experience_list #diploma2,
-.education_experience .container .experience .education_paragraph .education_list #diploma1,
-.education_experience .container .experience .education_paragraph .education_list #diploma2,
-.education_experience .container .experience .education_paragraph .experience_list #diploma1,
-.education_experience .container .experience .education_paragraph .experience_list #diploma2,
-.education_experience .container .experience .experience_paragraph .education_list #diploma1,
-.education_experience .container .experience .experience_paragraph .education_list #diploma2,
-.education_experience .container .experience .experience_paragraph .experience_list #diploma1,
-.education_experience .container .experience .experience_paragraph .experience_list #diploma2 {
+.education_experience .container .education .education_paragraph .education_list a,
+.education_experience .container .education .education_paragraph .experience_list a,
+.education_experience .container .education .experience_paragraph .education_list a,
+.education_experience .container .education .experience_paragraph .experience_list a,
+.education_experience .container .experience .education_paragraph .education_list a,
+.education_experience .container .experience .education_paragraph .experience_list a,
+.education_experience .container .experience .experience_paragraph .education_list a,
+.education_experience .container .experience .experience_paragraph .experience_list a {
   color: #fff;
   font-size: 1.125rem;
   font-weight: 700;
