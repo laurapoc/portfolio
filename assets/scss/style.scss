@@ -238,7 +238,6 @@ header {
         -moz-appearance: none;
         appearance: none;
         background-color: rgb(204, 204, 204);
-        
 
         /* Get rid of default border in Firefox. */
         border: none;
@@ -399,9 +398,7 @@ header {
         text-align: center;
       }
     }
-    .galery-block {
-      display: none;
-    }
+
     .galery-toggle {
       display: block;
       font-size: 2rem;
@@ -409,24 +406,36 @@ header {
       text-align: center;
     }
 
-    .show {
-      display: block;
-    }
-
     .photo-carousel {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
 
+      .photo:nth-child(n + 4):not(.show) {
+        opacity: 0.2;
+        visibility: hidden;
+        height: 0;
+        padding-bottom: 0%;
+      }
+
+      .show {
+        visibility: visible;
+        opacity: 1;
+        height: 100%;
+        padding-bottom: 2%;
+      }
+
+      .enableTransition {
+        opacity: 1;
+      }
+
       .photo {
         width: calc(33.3333% - 20px);
         padding: 0 20px 40px 20px;
+        transition: opacity 2s  ease-in;
 
         img {
           width: 100%;
-        }
-        .show {
-          display: block;
         }
       }
     }
@@ -816,8 +825,8 @@ header {
   }
   /* skills blokas */
   #skills {
-      #contact_me {
-        padding: 10px 20px;
-      }
+    #contact_me {
+      padding: 10px 20px;
+    }
   }
 }

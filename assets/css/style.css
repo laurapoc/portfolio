@@ -473,19 +473,11 @@ header .menu .main-nav li a {
   text-align: center;
 }
 
-.galery .container .galery-block {
-  display: none;
-}
-
 .galery .container .galery-toggle {
   display: block;
   font-size: 2rem;
   color: #4b5456;
   text-align: center;
-}
-
-.galery .container .show {
-  display: block;
 }
 
 .galery .container .photo-carousel {
@@ -499,17 +491,34 @@ header .menu .main-nav li a {
   justify-content: space-between;
 }
 
+.galery .container .photo-carousel .photo:nth-child(n + 4):not(.show) {
+  opacity: 0.2;
+  visibility: hidden;
+  height: 0;
+  padding-bottom: 0%;
+}
+
+.galery .container .photo-carousel .show {
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
+  padding-bottom: 2%;
+}
+
+.galery .container .photo-carousel .enableTransition {
+  opacity: 1;
+}
+
 .galery .container .photo-carousel .photo {
   width: calc(33.3333% - 20px);
   padding: 0 20px 40px 20px;
+  -webkit-transition: opacity 2s  ease-in;
+  -o-transition: opacity 2s  ease-in;
+  transition: opacity 2s  ease-in;
 }
 
 .galery .container .photo-carousel .photo img {
   width: 100%;
-}
-
-.galery .container .photo-carousel .photo .show {
-  display: block;
 }
 
 /* contact me blokas */
