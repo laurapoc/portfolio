@@ -138,6 +138,7 @@ header .menu .main-nav li a {
   font-size: 1rem;
   font-weight: 700;
   padding-left: 40px;
+  opacity: 0;
 }
 
 /* "home" blokas */
@@ -681,9 +682,6 @@ header .menu .main-nav li a {
     flex-direction: column;
     padding: 10px 0;
     text-align: start;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
   }
   .container .menu .main-nav ul li a {
     padding-left: 20px;
@@ -911,6 +909,24 @@ header .menu .main-nav li a {
   /* skills blokas */
   #skills #contact_me {
     padding: 10px 20px;
+  }
+}
+
+@-webkit-keyframes navLinkFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

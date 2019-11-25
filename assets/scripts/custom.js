@@ -16,8 +16,17 @@ $(document).ready(function(){
 
 let burger = document.querySelector(".burger");
 let menu = document.querySelector(".menu");
+let navLinks = document.querySelectorAll(".menu li a");
 burger.addEventListener("click", function(){
     menu.classList.toggle("show");
+     // Animate Links
+      navLinks.forEach((link, index) => {
+        if (link.style.animation) {
+          link.style.animation = "";
+        } else {
+          link.style.animation = `navLinkFade 1.5s ease forwards ${index / 7 + 0.2}s`;
+        }
+      });
 });
 
 
