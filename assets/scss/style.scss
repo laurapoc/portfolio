@@ -77,6 +77,7 @@ header {
   position: sticky;
   z-index: 2;
   top: 0;
+  opacity: 0.9;
 
   .burger {
     display: none;
@@ -115,7 +116,6 @@ header {
         font-size: 1rem;
         font-weight: 700;
         padding-left: 40px;
-        opacity: 0;
       }
     }
   }
@@ -434,7 +434,7 @@ header {
       .photo {
         width: calc(33.3333% - 20px);
         padding: 0 20px 40px 20px;
-        transition: opacity 2s  ease-in;
+        transition: opacity 2s ease-in;
 
         img {
           width: 100%;
@@ -571,9 +571,11 @@ header {
 
 @media all and (max-width: 1150px) {
   /* menu juosta */
+
   .container {
     .burger-menu-line {
       display: flex;
+      background-color: #0f0f0f;
       .logo-img {
         display: block;
         align-self: center;
@@ -589,10 +591,16 @@ header {
         ul {
           flex-direction: column;
           padding: 10px 0;
-          text-align: start;
+          text-align: left;
 
-          li a {
-            padding-left: 20px;            
+          li {
+            padding-bottom: 5%;
+            a {
+              padding-left: 20px;
+              opacity: 0;
+              -webkit-transition: opacity 2s; /* Safari prior 6.1 */
+              transition: opacity 2s;
+            }
           }
         }
         #logo {
@@ -836,10 +844,8 @@ header {
 @keyframes navLinkFade {
   from {
     opacity: 0;
-      
   }
   to {
     opacity: 1;
-     
   }
 }

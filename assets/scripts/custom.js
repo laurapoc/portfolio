@@ -1,34 +1,40 @@
 "use strict";
 
-$(document).ready(function(){
-    $(".owl-carousel").owlCarousel({
-        loop:true,
-        autoplay: false,
-        items:1,
-        dots: true,      
-    });
-  });
-
-  $('[data-fancybox="galerija1"]').fancybox({
+$(document).ready(function() {
+  $(".owl-carousel").owlCarousel({
     loop: true,
-    animationDuration: 500
+    autoplay: false,
+    items: 1,
+    dots: true
+  });
+});
+
+$('[data-fancybox="galerija1"]').fancybox({
+  loop: true,
+  animationDuration: 500
 });
 
 let burger = document.querySelector(".burger");
 let menu = document.querySelector(".menu");
 let navLinks = document.querySelectorAll(".menu li a");
-burger.addEventListener("click", function(){
-    menu.classList.toggle("show");
-     // Animate Links
-      navLinks.forEach((link, index) => {
-        if (link.style.animation) {
-          link.style.animation = "";
-        } else {
-          link.style.animation = `navLinkFade 1.5s ease forwards ${index / 7 + 0.2}s`;
-        }
-      });
+let nav = document.querySelector(".main-nav");
+burger.addEventListener("click", function() {
+  menu.classList.toggle("show");
+  // Animate Links
+  navLinks.forEach((link, index) => {
+    if (link.style.animation) {
+      link.style.animation = "";
+    } else {
+      link.style.animation = `navLinkFade 1.5s ease forwards ${index / 7}s`;
+    }
+    nav.animate(
+      {
+        backgroundColor: ["#ffffff", "#282828"]
+      },
+      900
+    );
+  });
 });
-
 
 let sort = document.querySelector(".galery-toggle");
 let galleryMenu = document.querySelector(".photo-carousel");

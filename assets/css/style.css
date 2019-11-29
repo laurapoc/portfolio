@@ -87,6 +87,7 @@ header {
   position: sticky;
   z-index: 2;
   top: 0;
+  opacity: 0.9;
 }
 
 header .burger {
@@ -138,7 +139,6 @@ header .menu .main-nav li a {
   font-size: 1rem;
   font-weight: 700;
   padding-left: 40px;
-  opacity: 0;
 }
 
 /* "home" blokas */
@@ -513,9 +513,9 @@ header .menu .main-nav li a {
 .galery .container .photo-carousel .photo {
   width: calc(33.3333% - 20px);
   padding: 0 20px 40px 20px;
-  -webkit-transition: opacity 2s  ease-in;
-  -o-transition: opacity 2s  ease-in;
-  transition: opacity 2s  ease-in;
+  -webkit-transition: opacity 2s ease-in;
+  -o-transition: opacity 2s ease-in;
+  transition: opacity 2s ease-in;
 }
 
 .galery .container .photo-carousel .photo img {
@@ -660,6 +660,7 @@ header .menu .main-nav li a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    background-color: #0f0f0f;
   }
   .container .burger-menu-line .logo-img {
     display: block;
@@ -681,10 +682,18 @@ header .menu .main-nav li a {
     -ms-flex-direction: column;
     flex-direction: column;
     padding: 10px 0;
-    text-align: start;
+    text-align: left;
+  }
+  .container .menu .main-nav ul li {
+    padding-bottom: 5%;
   }
   .container .menu .main-nav ul li a {
     padding-left: 20px;
+    opacity: 0;
+    -webkit-transition: opacity 2s;
+    /* Safari prior 6.1 */
+    -o-transition: opacity 2s;
+    transition: opacity 2s;
   }
   .container .menu .main-nav #logo {
     display: none;
